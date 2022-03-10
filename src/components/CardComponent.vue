@@ -1,20 +1,25 @@
 <template>
     <div class="card">
-        <figure>
-            <img src="../assets/logo.png" alt="">
+        <figure class="poster">
+            <img :src="src">
         </figure>
         
         <div class="info">
-            <p class="title">Blabla</p>
-            <p class="author">Blabla</p>
-            <p class="year">Blabla</p>
+            <p class="title">{{ title }}</p>
+            <p class="author">{{ author }}</p>
+            <p class="year">{{ year }}</p>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-
+export default { 
+    props: {
+        src: String,
+        title: String,
+        author: String,
+        year: String,
+    }
 }
 </script>
 
@@ -28,9 +33,11 @@ export default {
     flex-grow: 1;
 
     .info {
+
         .title {
             text-transform: uppercase;
             font-weight: 700;
+            padding: 10px 0;
         }
 
         .author, .year {
