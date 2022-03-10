@@ -13,17 +13,14 @@ export default {
 <style lang="scss" scoped>
 
 header {
-    // height: 100px;
-    background-color: #1E2D3B;
-    padding: 20px 5px;
-
+    background-color: #2E3A46;
+    padding: 15px 5px;
+    height: 10vh;
 
     .spotify-logo {
         fill: #1ED760;
         width: 40px;
     }
 }
-
-
 
 </style>
