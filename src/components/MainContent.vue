@@ -45,9 +45,10 @@ export default {
 <style lang="scss" scoped>
 
 main {
-    // height: calc(100vh - 10vh);
+    height: calc(100vh - 10vh);
     background-color: #1E2D3B;
-    flex-grow: 1;
+    // flex-grow: 1;
+
     #grid {
         width: 1024px;
         margin: 0 auto;
