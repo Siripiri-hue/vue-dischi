@@ -1,10 +1,12 @@
 <template>
     <main>
-        <Select @select-genre="filterAlbum"/>
+        <Select @select-genre="filterAlbum" />
 
         <section id="grid">
-            <Card v-for="(disc, index) in discs" :key="index" 
-            :src="disc.poster" :title="disc.title" :author="disc.author" :year="disc.year" />
+
+            <!-- :src="disc.poster" :title="disc.title" :author="disc.author" :year="disc.year"  -->
+            <Card v-for="(element, index) in filteredGenre" :key="index" 
+            :disc="element" />
         </section>
     </main>
 </template>
@@ -17,8 +19,17 @@ import Select from './SelectComponent.vue'
 export default {
     data() {
         return {
-            discs: [],
+            albums: [],
             selectedGenre: "",
+        }
+    },
+
+    computed: {
+        filteredGenre: function() {
+            return this.albums.filter((element) => {
+                const {genre} = element;
+                return genre.toLowerCase().includes (this.selectedGenre.toLowerCase());
+            })
         }
     },
 
@@ -27,7 +38,7 @@ export default {
 
             axios.get("https://flynn.boolean.careers/exercises/api/array/music")
                 .then ( res => {
-                    this.discs = res.data.response;
+                    this.albums = res.data.response;
                     console.log(res.data.response);
                 })
                 .catch ( err => {

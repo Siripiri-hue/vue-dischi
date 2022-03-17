@@ -2,11 +2,11 @@
     <div id="genre-select">
         <label for="cars">Choose a genre: </label>
         <select name="genres" id="genres" v-model="genreFromSelect" @change="$emit('select-genre', genreFromSelect)">
-            <option value="" disabled selected>Select your option</option>
+            <option value="">Tutti i generi</option>
             <option value="rock">Rock</option>
             <option value="jazz">Jazz</option>
             <option value="pop">Pop</option>
-            <option value="rap">Rap</option>
+            <option value="metal">Metal</option>
         </select>
     </div>
 </template>

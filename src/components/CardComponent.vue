@@ -1,13 +1,14 @@
 <template>
     <div class="card">
         <figure class="poster">
-            <img :src="src">
+            <img :src="disc.poster">
         </figure>
         
         <div class="info">
-            <p class="title">{{ title }}</p>
-            <p class="author">{{ author }}</p>
-            <p class="year">{{ year }}</p>
+            <p class="title">{{ disc.title }}</p>
+            <p class="author">{{ disc.author }}</p>
+            <p class="year">{{ disc.year }}</p>
+            <p class="year">{{ disc.genre }}</p>
         </div>
     </div>
 </template>
@@ -15,11 +16,11 @@
 <script>
 export default { 
     props: {
-        src: String,
-        title: String,
-        author: String,
-        year: String,
-    }
+        disc: {
+            type: Object,
+            required: true,
+        },
+    },    
 }
 </script>
 
