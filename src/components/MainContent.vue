@@ -1,6 +1,6 @@
 <template>
     <main>
-        <Select />
+        <Select @select-genre="filterAlbum"/>
 
         <section id="grid">
             <Card v-for="(disc, index) in discs" :key="index" 
@@ -17,7 +17,8 @@ import Select from './SelectComponent.vue'
 export default {
     data() {
         return {
-            discs: []
+            discs: [],
+            selectedGenre: "",
         }
     },
 
@@ -32,6 +33,11 @@ export default {
                 .catch ( err => {
                     console.log(err);
                 })
+        }, 
+
+        filterAlbum(genre) {
+            this.selectedGenre = genre;
+            console.log(genre);
         }
     },
 
