@@ -16,8 +16,8 @@ export default {
 
 header {
     background-color: #2E3A46;
-    padding: 15px 5px;
-    height: 10vh;
+    height: 8vh;
+    padding: 10px 10px;
 
     .spotify-logo {
         fill: #1ED760;

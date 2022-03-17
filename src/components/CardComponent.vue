@@ -8,7 +8,7 @@
             <p class="title">{{ disc.title }}</p>
             <p class="author">{{ disc.author }}</p>
             <p class="year">{{ disc.year }}</p>
-            <p class="year">{{ disc.genre }}</p>
+            <!-- <p class="year">{{ disc.genre }}</p> -->
         </div>
     </div>
 </template>
@@ -30,8 +30,8 @@ export default {
     background-color: #2E3A46;
     color: white;
     text-align: center;
-    width: calc(95% / 5);
-    flex-grow: 1;
+    max-width: calc((100% - 40px) / 5);
+    // flex-grow: 1;
     padding: 5px;
 
     .info {

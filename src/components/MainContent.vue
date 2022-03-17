@@ -65,25 +65,29 @@ export default {
 
 <style lang="scss" scoped>
 
+
 main {
-    // height: calc(100vh - 10vh);
+    height: calc(100vh - 8vh);
     // flex-grow: 1;
     background-color: #1E2D3B;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     color: white;
     padding-top: 20px;
+    overflow: hidden;
 
     #grid {
         width: 1024px;
         margin: 0 auto;
         padding: 20px 0;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
     }
 }
+
+
 
 </style>
