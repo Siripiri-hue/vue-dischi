@@ -1,5 +1,7 @@
 <template>
     <main>
+        <Select />
+
         <section id="grid">
             <Card v-for="(disc, index) in discs" :key="index" 
             :src="disc.poster" :title="disc.title" :author="disc.author" :year="disc.year" />
@@ -10,6 +12,7 @@
 <script>
 import Card from './CardComponent.vue'
 import axios from 'axios'
+import Select from './SelectComponent.vue'
 
 export default {
     data() {
@@ -33,6 +36,7 @@ export default {
     },
 
     components: {
+        Select,
         Card,
     },
 
@@ -45,9 +49,15 @@ export default {
 <style lang="scss" scoped>
 
 main {
-    height: calc(100vh - 10vh);
-    background-color: #1E2D3B;
+    // height: calc(100vh - 10vh);
     // flex-grow: 1;
+    background-color: #1E2D3B;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
 
     #grid {
         width: 1024px;

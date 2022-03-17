@@ -31,6 +31,7 @@ export default {
     text-align: center;
     width: calc(95% / 5);
     flex-grow: 1;
+    padding: 5px;
 
     .info {
 
